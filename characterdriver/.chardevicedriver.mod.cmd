@@ -1,0 +1,1 @@
+savedcmd_/home/shivateja/devicedrivers/characterdriver/chardevicedriver.mod := printf '%s\n'   chardevicedriver.o | awk '!x[$$0]++ { print("/home/shivateja/devicedrivers/characterdriver/"$$0) }' > /home/shivateja/devicedrivers/characterdriver/chardevicedriver.mod
