@@ -1,25 +1,27 @@
 #include <linux/module.h>
 #include <linux/platform_device.h>
 
-static struct platform_device toy_device = {
-    .name = "toy_phone", // This name should match the driver's name
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("Shiva Teja");
+MODULE_DESCRIPTION("Mock Camera Platform Device");
+
+static struct platform_device camera_device = {
+    .name = "mock_camera",
     .id = -1,
 };
 
-static int __init toy_device_init(void) {
-    pr_info("Toy Device: Registering\n");
-    return platform_device_register(&toy_device);
+static int __init camera_device_init(void)
+{
+    pr_info("Camera device: registering...\n");
+    return platform_device_register(&camera_device);
 }
 
-static void __exit toy_device_exit(void) {
-    pr_info("Toy Device: Unregistering\n");
-    platform_device_unregister(&toy_device);
+static void __exit camera_device_exit(void)
+{
+    pr_info("Camera device: unregistering...\n");
+    platform_device_unregister(&camera_device);
 }
 
-module_init(toy_device_init);
-module_exit(toy_device_exit);
-
-MODULE_LICENSE("GPL");
-MODULE_DESCRIPTION("Toy Platform Device");
-MODULE_AUTHOR("Shiva Teja");
+module_init(camera_device_init);
+module_exit(camera_device_exit);
 
