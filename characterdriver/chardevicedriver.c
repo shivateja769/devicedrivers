@@ -12,7 +12,6 @@ MODULE_DESCRIPTION("Simple Hello World Char Device Driver");
 
 static int major_number;
 
-// Function Prototypes
 int chardev_open(struct inode *, struct file *);
 ssize_t chardev_read(struct file *, char __user *, size_t, loff_t *);
 ssize_t chardev_write(struct file *, const char __user *, size_t, loff_t *);
@@ -33,11 +32,30 @@ int chardev_open(struct inode *pinode, struct file *pfile){
     printk(KERN_INFO "simple_char_driver: Open called\n");
     return 0;
 }
-
+/*
 ssize_t chardev_read(struct file *pfile, char __user *buffer, size_t length, loff_t *offset){
     printk(KERN_INFO "simple_char_driver: Read called\n");
     return 0;
 }
+*/
+ssize_t chardev_read(struct file *pfile, char __user *buffer, size_t length, loff_t *offset){
+    const char *message = "Hello from Kernel!\n";
+    size_t message_len = strlen(message);
+
+    printk(KERN_INFO "simple_char_driver: Read called\n");
+
+    if (*offset >= message_len)
+        return 0;  // No more data
+
+    // Copy to user space
+    if (copy_to_user(buffer, message, message_len)) {
+        return -EFAULT;
+    }
+
+    *offset += message_len;
+    return message_len;
+}
+
 
 ssize_t chardev_write(struct file *pfile, const char __user *buffer, size_t length, loff_t *offset){
     printk(KERN_INFO "simple_char_driver: Write called\n");
