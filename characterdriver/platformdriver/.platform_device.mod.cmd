@@ -1,0 +1,1 @@
+savedcmd_/home/shivateja/devicedrivers/characterdriver/platformdriver/platform_device.mod := printf '%s\n'   platform_device.o | awk '!x[$$0]++ { print("/home/shivateja/devicedrivers/characterdriver/platformdriver/"$$0) }' > /home/shivateja/devicedrivers/characterdriver/platformdriver/platform_device.mod

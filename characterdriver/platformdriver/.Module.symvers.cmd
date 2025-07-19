@@ -1,0 +1,1 @@
+savedcmd_/home/shivateja/devicedrivers/characterdriver/platformdriver/Module.symvers :=  scripts/mod/modpost -M -m       -o /home/shivateja/devicedrivers/characterdriver/platformdriver/Module.symvers -n -T /home/shivateja/devicedrivers/characterdriver/platformdriver/modules.order -i Module.symvers -e 

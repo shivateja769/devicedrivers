@@ -1,0 +1,1 @@
+savedcmd_/home/shivateja/devicedrivers/characterdriver/platformdriver/modules.order := {   echo /home/shivateja/devicedrivers/characterdriver/platformdriver/platform_device.o;   echo /home/shivateja/devicedrivers/characterdriver/platformdriver/platform_driver.o; :; } > /home/shivateja/devicedrivers/characterdriver/platformdriver/modules.order
