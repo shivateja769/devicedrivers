@@ -21,6 +21,7 @@ __used __section("__versions") = {
 	{ 0x92997ed8, "_printk" },
 	{ 0x5b8239ca, "__x86_return_thunk" },
 	{ 0x6b10bee1, "_copy_to_user" },
+	{ 0x13c49cc2, "_copy_from_user" },
 	{ 0x2a8af3ef, "__register_chrdev" },
 	{ 0x6bc3fbc0, "__unregister_chrdev" },
 	{ 0xbdfb6dbb, "__fentry__" },
