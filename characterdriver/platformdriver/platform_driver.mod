@@ -1,1 +1,0 @@
-/home/shivateja/devicedrivers/characterdriver/platformdriver/platform_driver.o

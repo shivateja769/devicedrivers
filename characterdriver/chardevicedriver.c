@@ -110,7 +110,7 @@ static int __init ldd_init(void) {
     }
 
     /* Create device class */
-    my_class = class_create(THIS_MODULE, CLASS_NAME);
+    my_class = class_create(CLASS_NAME);
     if (IS_ERR(my_class)) {
         pr_err("Failed to create class\n");
         cdev_del(&my_cdev);

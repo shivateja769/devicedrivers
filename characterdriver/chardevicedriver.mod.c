@@ -18,13 +18,20 @@ __section(".gnu.linkonce.this_module") = {
 
 static const struct modversion_info ____versions[]
 __used __section("__versions") = {
-	{ 0x92997ed8, "_printk" },
-	{ 0x5b8239ca, "__x86_return_thunk" },
+	{ 0x69b07fa1, "class_create" },
+	{ 0x2f920287, "cdev_del" },
+	{ 0xc8cf812f, "device_create" },
+	{ 0x73ca058d, "class_destroy" },
 	{ 0x6b10bee1, "_copy_to_user" },
 	{ 0x13c49cc2, "_copy_from_user" },
-	{ 0x2a8af3ef, "__register_chrdev" },
-	{ 0x6bc3fbc0, "__unregister_chrdev" },
+	{ 0x281722e1, "device_destroy" },
 	{ 0xbdfb6dbb, "__fentry__" },
+	{ 0x92997ed8, "_printk" },
+	{ 0x5b8239ca, "__x86_return_thunk" },
+	{ 0xe3ec2f2b, "alloc_chrdev_region" },
+	{ 0xd0802696, "cdev_init" },
+	{ 0xaf860c30, "cdev_add" },
+	{ 0x6091b333, "unregister_chrdev_region" },
 	{ 0xbf1981cb, "module_layout" },
 };
 
